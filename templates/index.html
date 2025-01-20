@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Price Predictor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #f9fae0, #03419d);
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #00796b;
+        }
+        .btn-primary {
+            background-color: #004d40;
+            border-color: #004d40;
+        }
+        .btn-primary:hover {
+            background-color: #006907;
+            border-color: #004d40;
+        }
+    </style>
 </head>
-<body>
+<body class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <div class="container mt-5">
         <h1 class="text-center mb-4">Laptop Price Predictor</h1>
         <form action="/predict" method="POST">
@@ -52,9 +69,6 @@
                     <option value="Yes">Yes</option>
                 </select>
             </div>
-
-
-
             <div class="mb-3">
                 <label for="screen_size" class="form-label">Screen Size (in inches)</label>
                 <div class="d-flex align-items-center">
@@ -62,9 +76,6 @@
                     <span id="screen_size_value" class="ms-3 fw-bold">13.0</span>
                 </div>
             </div>
-            
-            
-            
             <div class="mb-3">
                 <label for="resolution" class="form-label">Resolution</label>
                 <select class="form-select" name="resolution" id="resolution">
@@ -116,7 +127,6 @@
             <button type="submit" class="btn btn-primary w-100">Predict Price</button>
         </form>
     </div>
-
     <script>
         function updateScreenSizeValue(value) {
             document.getElementById('screen_size_value').textContent = value;
